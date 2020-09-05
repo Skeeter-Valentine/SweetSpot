@@ -56,6 +56,17 @@ export default class Made11 extends Component {
      missed=()=>{
          this.setState(state=>({shotsRem: state.shotsRem-1}))
      }
+     reset=()=>{
+        this.setState(state=>({shotsRem: 12}))
+        this.setState(state=>({numberOfG11: 0}));
+        this.setState(state=>({numberOfG22: 0}));
+        this.setState(state=>({numberOfG33: 0}));
+        this.setState(state=>({numberOfG44: 0}));
+        this.setState(state=>({numberOfG55: 0}));
+        this.setState(state=>({numberOfG66: 0}));
+        this.setState(state=>({score: 0}));
+    }
+    
 
     render() {
     const itemsToShow11=this.state.clicks11.slice(0,this.state.numberOfG11).map(clicks11=><div>{clicks11.name}</div>)
@@ -66,6 +77,18 @@ export default class Made11 extends Component {
     const itemsToShow66=this.state.clicks66.slice(0,this.state.numberOfG66).map(clicks66=><div>{clicks66.name}</div>)
     const scoreSet=this.state.score
     const shotSet=this.state.shotsRem
+    if (this.state.shotsRem===0){
+        return (
+            <div>
+            <div>
+               <h1>Final Score: {scoreSet}</h1> 
+            </div>
+            <div>
+                <button onClick={this.reset}>New Game</button>
+            </div>
+            </div>
+        )
+    }else{
         return (
             <div > 
             <div className="row">
@@ -121,4 +144,5 @@ export default class Made11 extends Component {
             </div>
         )
     }
+}
 }
