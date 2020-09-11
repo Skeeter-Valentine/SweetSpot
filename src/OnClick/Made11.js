@@ -5,17 +5,17 @@ export default class Made11 extends Component {
         super()
     
         this.state={
-            clicks11:[{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},],
+            clicks11:[{"name":"S"},{"name":"W"},{"name":"E"},{"name":"E"},{"name":"T"},{"name":"S"},{"name":"P"},{"name":"O"},{"name":"T"},{"name":"!"},{"name":"!"},{"name":"!"},],
             numberOfG11: 0,
-            clicks22:[{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},],
+            clicks22:[{"name":"S"},{"name":"W"},{"name":"E"},{"name":"E"},{"name":"T"},{"name":"S"},{"name":"P"},{"name":"O"},{"name":"T"},{"name":"!"},{"name":"!"},{"name":"!"},],
             numberOfG22: 0,
-            clicks33:[{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},],
+            clicks33:[{"name":"S"},{"name":"W"},{"name":"E"},{"name":"E"},{"name":"T"},{"name":"S"},{"name":"P"},{"name":"O"},{"name":"T"},{"name":"!"},{"name":"!"},{"name":"!"},],
             numberOfG33: 0,
-            clicks44:[{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},],
+            clicks44:[{"name":"S"},{"name":"W"},{"name":"E"},{"name":"E"},{"name":"T"},{"name":"S"},{"name":"P"},{"name":"O"},{"name":"T"},{"name":"!"},{"name":"!"},{"name":"!"},],
             numberOfG44: 0,
-            clicks55:[{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},],
+            clicks55:[{"name":"S"},{"name":"W"},{"name":"E"},{"name":"E"},{"name":"T"},{"name":"S"},{"name":"P"},{"name":"O"},{"name":"T"},{"name":"!"},{"name":"!"},{"name":"!"},],
             numberOfG55: 0,
-            clicks66:[{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},{"name":"G"},],
+            clicks66:[{"name":"S"},{"name":"W"},{"name":"E"},{"name":"E"},{"name":"T"},{"name":"S"},{"name":"P"},{"name":"O"},{"name":"T"},{"name":"!"},{"name":"!"},{"name":"!"},],
             numberOfG66: 0,
             score: 0,
             shotsRem: 12
@@ -40,17 +40,18 @@ export default class Made11 extends Component {
      }
      showMore44=()=>{
         this.setState(state=>({numberOfG44: state.numberOfG44+1}));
-        this.setState(state=>({score: state.score+4}));
+        this.setState(state=>({score: state.score*2}));
         this.setState(state=>({shotsRem: state.shotsRem-1}));
      }
      showMore55=()=>{
         this.setState(state=>({numberOfG55: state.numberOfG55+1}));
-        this.setState(state=>({score: state.score+5}));
+        this.setState(state=>({score: state.score*3}));
         this.setState(state=>({shotsRem: state.shotsRem-1}));
      }
      showMore66=()=>{
         this.setState(state=>({numberOfG66: state.numberOfG66+1}));
-        this.setState(state=>({score: state.score+6}));
+        this.setState(state=>({score: state.score*5}));
+        this.setState(state=>({shotsRem: state.shotsRem-1}));
         
      }
      missed=()=>{
@@ -91,57 +92,68 @@ export default class Made11 extends Component {
     }else{
         return (
             <div > 
+                <h2> </h2>
+            <div className="inner-app">
+            <div >
+                <div className="column1">11 ft</div>
+                <div className="column2">22 ft</div>
+                <div className="column2">33 ft</div>
+                <div className="column2">44 ft</div>
+                <div className="column2">55 ft</div>
+                <div className="column2">66 ft</div>
+            </div>
+            <div className="column">
             <div className="row">
-                11ft
                 <div>
-                <button onClick={this.showMore11}>made</button>
-                <button onClick={this.missed}>missed</button>
+                    <button onClick={this.showMore11}>Made</button>
+                    <button onClick={this.missed}>Missed</button>
                 </div>
                 {itemsToShow11}    
             </div>
             <div className="row">
-                22ft
                 <div>
-                <button onClick={this.showMore22}>made</button>
-                <button onClick={this.missed}>missed</button>
+                    <button onClick={this.showMore22}>Made</button>
+                    <button onClick={this.missed}>Missed</button>
                 </div>
                 {itemsToShow22}
             </div>
             <div className="row">
-                33ft
                 <div>
-                <button onClick={this.showMore33}>made</button>
-                <button onClick={this.missed}>missed</button>
+                    <button onClick={this.showMore33}>Made</button>
+                    <button onClick={this.missed}>Missed</button>
                 </div>
                 {itemsToShow33}
             </div>
             <div className="row">
-                44ft
                 <div>
-                <button onClick={this.showMore44}>made</button>
-                <button onClick={this.missed}>missed</button>
+                    <button onClick={this.showMore44}>Made</button>
+                    <button onClick={this.missed}>Missed</button>
                 </div>
                 {itemsToShow44}
             </div>
             <div className="row">
-                55ft
                 <div>
-                <button onClick={this.showMore55}>made</button>
-                <button onClick={this.missed}>missed</button>
+                    <button onClick={this.showMore55}>Made</button>
+                    <button onClick={this.missed}>Missed</button>
                 </div>
                 {itemsToShow55}
             </div>
             <div className="row">
-                66ft
                 <div>
-                <button onClick={this.showMore66}>made</button>
-                <button onClick={this.missed}>missed</button>
+                    <button onClick={this.showMore66}>Made</button>
+                    <button onClick={this.missed}>Missed</button>
                 </div>
                 {itemsToShow66}
             </div>
-            <div>Shots Remaining: {shotSet}</div>
-            <div>Total Score: {scoreSet}</div>
             </div>
+            </div>
+            <h1>Total Score: {scoreSet}</h1>
+            <h2>Shots Remaining: {shotSet}</h2>
+            <div>
+                <button onClick={this.reset}>New Game</button>
+            </div>
+            </div>
+            
         )
     }
 }
