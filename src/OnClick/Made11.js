@@ -25,32 +25,32 @@ export default class Made11 extends Component {
     }
     showMore11=()=>{
        this.setState(state=>({numberOfG11: state.numberOfG11+1}));
-       this.setState(state=>({score: state.score+1}));
+       this.setState(state=>({score: state.score+2}));
        this.setState(state=>({shotsRem: state.shotsRem-1}));
     }
     showMore22=()=>{
         this.setState(state=>({numberOfG22: state.numberOfG22+1}));
-        this.setState(state=>({score: state.score+2}));
+        this.setState(state=>({score: state.score+3}));
         this.setState(state=>({shotsRem: state.shotsRem-1}));
      }
      showMore33=()=>{
         this.setState(state=>({numberOfG33: state.numberOfG33+1}));
-        this.setState(state=>({score: state.score+4}));
+        this.setState(state=>({score: state.score+5}));
         this.setState(state=>({shotsRem: state.shotsRem-1}));
      }
      showMore44=()=>{
         this.setState(state=>({numberOfG44: state.numberOfG44+1}));
-        this.setState(state=>({score: state.score+7}));
+        this.setState(state=>({score: state.score+9}));
         this.setState(state=>({shotsRem: state.shotsRem-1}));
      }
      showMore55=()=>{
         this.setState(state=>({numberOfG55: state.numberOfG55+1}));
-        this.setState(state=>({score: state.score+12}));
+        this.setState(state=>({score: state.score+16}));
         this.setState(state=>({shotsRem: state.shotsRem-1}));
      }
      showMore66=()=>{
         this.setState(state=>({numberOfG66: state.numberOfG66+1}));
-        this.setState(state=>({score: state.score+20}));
+        this.setState(state=>({score: state.score+25}));
         this.setState(state=>({shotsRem: state.shotsRem-1}));
         
      }
