@@ -1,3 +1,16 @@
+Sweet Spot is an app designed to gamify practice putting for disc golfers. The rules of the game are as follows:
+
+A player gets 12 shots to score as many points as they can. The player can choose to shoot from:
+
+11 ft for 2 pts
+22 ft for 3 pts
+33 ft for 5 pts
+44 ft for 9 pts
+55 ft for 16 pts
+66 ft for 25 pts
+
+The player will use the app to track their score. Click made or missed from the given distance after each shot and the app will count down shots from 12 while tallying the points that have been scored. After all shots have been thrown the app displays a final score and allows for the player to restart.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
